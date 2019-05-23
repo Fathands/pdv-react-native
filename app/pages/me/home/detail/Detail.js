@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {StyleSheet, Text, View, Image, Button, Alert, ListView} from 'react-native';
+import { StyleSheet, Text, View, Image, Button, Alert, ListView } from 'react-native';
 
 export default class Detail extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   onPressLearnMore() {
@@ -12,7 +12,7 @@ export default class Detail extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Detail</Text>
         <Button
           onPress={this.onPressLearnMore.bind(this)}
@@ -21,6 +21,6 @@ export default class Detail extends Component {
           accessibilityLabel="Learn more about this purple button"
         />
       </View>
-    )
+    );
   }
 }

@@ -8,7 +8,7 @@ import platform from './native-base-theme/variables/platform';
 
 import AppContainer from './AppNavigator';
 
-import {name as appName} from './app.json';
+import { name as appName } from './app.json';
 
 class App extends Component {
   render() {

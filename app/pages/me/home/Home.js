@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {StyleSheet, Text, View, Image, Button, Alert} from 'react-native';
+import { StyleSheet, Text, View, Image, Button, Alert } from 'react-native';
 
 export default class Home extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   onPressLearnMore() {
@@ -12,7 +12,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Hello, RN!</Text>
         <Button
           onPress={this.onPressLearnMore.bind(this)}
@@ -21,6 +21,6 @@ export default class Home extends Component {
           accessibilityLabel="Learn more about this purple button"
         />
       </View>
-    )
+    );
   }
 }

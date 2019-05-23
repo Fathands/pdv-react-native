@@ -6,37 +6,37 @@ const TabBarComponent = props => {
     onTabPress,
     onTabLongPress,
     navigation
-  } = props
+  } = props;
 
-  const { routes, index: activeRouteIndex } = navigation.state
+  const { routes, index: activeRouteIndex } = navigation.state;
   const tabName = {
     VISA: '签证',
     ORDERS: '订单',
     ME: '我的',
-  }
+  };
   return (
     <Footer>
       <FooterTab>
         {routes.map((route, routeIndex) => {
           return (
-            <Button 
-              badge 
+            <Button
+              badge
               vertical
               key={routeIndex}
               onPress={() => {
-                onTabPress({ route })
+                onTabPress({ route });
               }}
               onLongPress={() => {
-                onTabLongPress({ route })
+                onTabLongPress({ route });
               }}>
               <Icon name="apps" />
               <Text>{tabName[route.routeName]}</Text>
             </Button>
-           );
+          );
         })}
       </FooterTab>
     </Footer>
   );
-}
+};
 
-export default TabBarComponent
+export default TabBarComponent;
