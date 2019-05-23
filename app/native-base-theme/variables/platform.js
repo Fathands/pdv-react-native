@@ -136,11 +136,11 @@ export default {
 
   // Footer
   footerHeight: 55,
-  footerDefaultBg: platform === 'ios' ? '#F8F8F8' : '#ff4646',
+  footerDefaultBg: platform === 'ios' ? '#F8F8F8' : 'rgba(255, 255, 255, .9)',
   footerPaddingBottom: 0,
 
   // FooterTab
-  tabBarTextColor: platform === 'ios' ? '#6b6b6b' : '#b3c7f9',
+  tabBarTextColor: platform === 'ios' ? '#6b6b6b' : '#d6d6d6',
   tabBarTextSize: platform === 'ios' ? 14 : 11,
   activeTab: platform === 'ios' ? '#007aff' : '#fff',
   sTabBarActiveTextColor: '#007aff',

@@ -14,10 +14,16 @@ const TabBarComponent = props => {
     ORDERS: '订单',
     ME: '我的',
   };
+
+  const activeTintColor = '#ff4646';
+  const inactiveTintColor = '#d6d6d6';
+
   return (
     <Footer>
       <FooterTab>
         {routes.map((route, routeIndex) => {
+          const isRouteActive = routeIndex === activeRouteIndex;
+          const tintColor = isRouteActive ? activeTintColor : inactiveTintColor;
           return (
             <Button
               badge
@@ -29,8 +35,8 @@ const TabBarComponent = props => {
               onLongPress={() => {
                 onTabLongPress({ route });
               }}>
-              <Icon name="apps" />
-              <Text>{tabName[route.routeName]}</Text>
+              <Icon name="apps" style={{ color: tintColor }} />
+              <Text style={{ color: tintColor }}>{tabName[route.routeName]}</Text>
             </Button>
           );
         })}
