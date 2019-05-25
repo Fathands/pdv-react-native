@@ -1,5 +1,7 @@
 import React from 'react';
-import { Footer, FooterTab, Button, Text, Icon } from 'native-base';
+import { Image } from 'react-native';
+import { Footer, FooterTab, Button, Text } from 'native-base';
+import Images from '../../asset/images';
 
 const TabBarComponent = props => {
   const {
@@ -15,15 +17,21 @@ const TabBarComponent = props => {
     ME: '我的',
   };
 
-  const activeTintColor = '#ff4646';
-  const inactiveTintColor = '#d6d6d6';
+  const tabImage = {
+    VISA: 'nav_visa',
+    ORDERS: 'nav_order',
+    ME: 'nav_mine'
+  };
 
+  const activeTintColor = '#ff5a60';
+  const inactiveTintColor = '#cfcfcf';
   return (
     <Footer>
       <FooterTab>
         {routes.map((route, routeIndex) => {
           const isRouteActive = routeIndex === activeRouteIndex;
           const tintColor = isRouteActive ? activeTintColor : inactiveTintColor;
+          const iconUrl = isRouteActive ? Images.tabbar[tabImage[route.routeName] + '_a'] : Images.tabbar[tabImage[route.routeName]];
           return (
             <Button
               badge
@@ -35,7 +43,9 @@ const TabBarComponent = props => {
               onLongPress={() => {
                 onTabLongPress({ route });
               }}>
-              <Icon name="apps" style={{ color: tintColor }} />
+              <Image
+                source={iconUrl}
+              />
               <Text style={{ color: tintColor }}>{tabName[route.routeName]}</Text>
             </Button>
           );

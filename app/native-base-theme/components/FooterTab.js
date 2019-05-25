@@ -10,11 +10,6 @@ export default (variables /* : * */ = variable) => {
   const footerTabTheme = {
     'NativeBase.Button': {
       '.active': {
-        'NativeBase.Text': {
-          color: variables.tabBarActiveTextColor,
-          fontSize: variables.tabBarTextSize,
-          lineHeight: 16
-        },
         'NativeBase.Icon': {
           color: variables.tabBarActiveTextColor
         },
@@ -31,10 +26,12 @@ export default (variables /* : * */ = variable) => {
       shadowOffset: null,
       shadowRadius: null,
       shadowOpacity: null,
-      alignSelf: 'stretch',
+      paddingTop: 6,
+      paddingBottom: 4,
+      alignSelf: 'center',
       flex: 1,
       height: variables.footerHeight,
-      justifyContent: 'flex-end',
+      justifyContent: 'center',
       '.badge': {
         'NativeBase.Badge': {
           'NativeBase.Text': {
@@ -72,7 +69,7 @@ export default (variables /* : * */ = variable) => {
     flexDirection: 'row',
     justifyContent: 'space-between',
     flex: 1,
-    alignSelf: 'stretch'
+    alignSelf: 'center'
   };
 
   return footerTabTheme;
