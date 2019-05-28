@@ -10,6 +10,7 @@ import Orders from './pages/orders/Orders';
 import Me from './pages/me/Me';
 import Detail from './pages/me/home/detail/Detail';
 
+import Startup from './pages/startup/Startup';
 import Welcome from './pages/welcome/Welcome';
 
 const VisaStack = createStackNavigator({
@@ -73,6 +74,12 @@ const tabBottomNav = createBottomTabNavigator(
   }
 );
 
+const StartupStack = createStackNavigator({
+  Startup,
+}, {
+  initialRouteName: 'Startup'
+});
+
 const WelcomeStack = createStackNavigator({
   Welcome,
 }, {
@@ -80,6 +87,7 @@ const WelcomeStack = createStackNavigator({
 });
 
 const SwitchNav = createSwitchNavigator({
+  Startup: StartupStack,
   Welcome: WelcomeStack,
   tabBottomNav,
 });
