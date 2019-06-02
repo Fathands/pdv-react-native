@@ -1,17 +1,17 @@
 
 import { createStackNavigator, createAppContainer, createBottomTabNavigator, createSwitchNavigator } from 'react-navigation';
 
-import TabBarComponent from './pages/components/common/TabBarComponent';
+import TabBarComponent from './src/components/common/TabBarComponent';
 
-import Visa from './pages/visa/Visa';
+import Visa from './src/pages/visa/Visa';
 
-import Orders from './pages/orders/Orders';
+import Orders from './src/pages/orders/Orders';
 
-import Me from './pages/me/Me';
-import Detail from './pages/me/home/detail/Detail';
+import Me from './src/pages/me/Me';
+import Detail from './src/pages/me/home/detail/Detail';
 
-import Startup from './pages/startup/Startup';
-import Welcome from './pages/welcome/Welcome';
+import Startup from './src/pages/startup/Startup';
+import Welcome from './src/pages/welcome/Welcome';
 
 const VisaStack = createStackNavigator({
   Visa,
