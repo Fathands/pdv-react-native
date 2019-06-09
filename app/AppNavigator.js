@@ -7,11 +7,12 @@ import Visa from './src/pages/visa/Visa';
 
 import Orders from './src/pages/orders/Orders';
 
-import Me from './src/pages/me/Me';
-import Detail from './src/pages/me/home/detail/Detail';
+import Mine from './src/pages/mine/Mine';
+import Detail from './src/pages/mine/home/detail/Detail';
 
 import Startup from './src/pages/startup/Startup';
 import Welcome from './src/pages/welcome/Welcome';
+import Login from './src/pages/login/Login';
 
 const VisaStack = createStackNavigator({
   Visa,
@@ -45,13 +46,13 @@ OrdersStack.navigationOptions = ({ navigation }) => {
   };
 };
 
-const MeStack = createStackNavigator({
-  Me,
+const MineStack = createStackNavigator({
+  Mine,
   Detail,
 }, {
-  initialRouteName: 'Me'
+  initialRouteName: 'Mine'
 });
-MeStack.navigationOptions = ({ navigation }) => {
+MineStack.navigationOptions = ({ navigation }) => {
   let tabBarVisible = true;
   if (navigation.state.index > 0) {
     tabBarVisible = false;
@@ -66,7 +67,7 @@ const tabBottomNav = createBottomTabNavigator(
   {
     VISA: VisaStack,
     ORDERS: OrdersStack,
-    ME: MeStack,
+    Mine: MineStack,
   },
   {
     initialRouteName: 'VISA',
@@ -74,21 +75,17 @@ const tabBottomNav = createBottomTabNavigator(
   }
 );
 
-const StartupStack = createStackNavigator({
-  Startup,
-}, {
-  initialRouteName: 'Startup'
-});
-
-const WelcomeStack = createStackNavigator({
-  Welcome,
-}, {
-  initialRouteName: 'Welcome'
-});
-
 const SwitchNav = createSwitchNavigator({
-  Startup: StartupStack,
-  Welcome: WelcomeStack,
+  Startup: {
+    screen: Startup,
+  },
+  Welcome: {
+    screen: Welcome,
+  },
+  Login: {
+    screen: Login,
+    mode: 'modal'
+  },
   tabBottomNav,
 });
 

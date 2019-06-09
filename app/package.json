@@ -8,6 +8,7 @@
     "lint": "eslint --ext .js ./pages --fix"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.4.2",
     "@react-native-community/viewpager": "^1.1.7",
     "lottie-react-native": "^2.6.1",
     "native-base": "^2.12.1",

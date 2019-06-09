@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import LottieView from 'lottie-react-native';
+import { getData } from '../../services/async-storage';
 
 export default class Startup extends Component {
   static navigationOptions = {
     header: null,
   };
   hideSplashScreen() {
-    this.props.navigation.navigate('Welcome');
+    getData('welcome', 'visited').then(res => {
+      if (res === 'YES') {
+        this.props.navigation.navigate('Mine');
+      } else {
+        this.props.navigation.navigate('Welcome');
+      }
+    });
   }
   render() {
     return (

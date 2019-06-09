@@ -14,13 +14,13 @@ const TabBarComponent = props => {
   const tabName = {
     VISA: '签证',
     ORDERS: '订单',
-    ME: '我的',
+    Mine: '我的',
   };
 
   const tabImage = {
     VISA: 'nav_visa',
     ORDERS: 'nav_order',
-    ME: 'nav_mine'
+    Mine: 'nav_mine'
   };
 
   const activeTintColor = '#ff5a60';

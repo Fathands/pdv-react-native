@@ -3,6 +3,7 @@ import { Text, StyleSheet, View, Dimensions } from 'react-native';
 import { Button } from 'native-base';
 import ViewPager from '@react-native-community/viewpager';
 import LottieView from 'lottie-react-native';
+import { storeData, getData } from '../../services/async-storage';
 
 const devWidth = Dimensions.get('window').width;
 
@@ -32,7 +33,13 @@ export default class Welcome extends Component {
   }
 
   goVisa() {
-    this.props.navigation.navigate('Visa');
+    getData('welcome', 'visited').then(res => {
+      if (res === 'YES') {
+        this.props.navigation.navigate('Visa');
+      } else {
+        storeData('welcome', 'visited', 'YES');
+      }
+    });
   }
 
   render() {

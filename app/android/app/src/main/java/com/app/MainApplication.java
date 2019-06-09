@@ -3,6 +3,7 @@ package com.app;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
 import com.airbnb.android.react.lottie.LottiePackage;
 import com.swmansion.reanimated.ReanimatedPackage;
@@ -27,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new AsyncStoragePackage(),
             new RNCViewPagerPackage(),
             new LottiePackage(),
             new ReanimatedPackage(),
