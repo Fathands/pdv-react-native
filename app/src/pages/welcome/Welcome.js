@@ -1,9 +1,16 @@
+/*
+ * @Author: Aiden
+ * @Date: 2019-05-28 22:08:42
+ * @LastEditors: Aiden
+ * @LastEditTime: 2019-08-15 00:04:46
+ * @Description: file content
+ */
 import React, { Component } from 'react';
 import { Text, StyleSheet, View, Dimensions } from 'react-native';
 import { Button } from 'native-base';
 import ViewPager from '@react-native-community/viewpager';
 import LottieView from 'lottie-react-native';
-import { storeData, getData } from '../../services/async-storage';
+import { storeData, getData } from '../../services/async-storage.service';
 
 const devWidth = Dimensions.get('window').width;
 

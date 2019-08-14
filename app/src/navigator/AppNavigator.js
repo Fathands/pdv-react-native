@@ -1,18 +1,25 @@
+/*
+ * @Author: Aiden
+ * @Date: 2019-05-19 15:50:44
+ * @LastEditors: Aiden
+ * @LastEditTime: 2019-08-14 22:20:09
+ * @Description: file content
+ */
 
 import { createStackNavigator, createAppContainer, createBottomTabNavigator, createSwitchNavigator } from 'react-navigation';
 
-import TabBarComponent from './src/components/common/TabBarComponent';
+import TabBarComponent from '../components/common/TabBarComponent';
 
-import Visa from './src/pages/visa/Visa';
+import Visa from '../pages/visa/Visa';
 
-import Orders from './src/pages/orders/Orders';
+import Orders from '../pages/orders/Orders';
+import Detail from '../pages/orders/home/detail/Detail';
 
-import Mine from './src/pages/mine/Mine';
-import Detail from './src/pages/mine/home/detail/Detail';
+import Mine from '../pages/mine/Mine';
 
-import Startup from './src/pages/startup/Startup';
-import Welcome from './src/pages/welcome/Welcome';
-import Login from './src/pages/login/Login';
+import Startup from '../pages/startup/Startup';
+import Welcome from '../pages/welcome/Welcome';
+import Login from '../pages/login/Login';
 
 const VisaStack = createStackNavigator({
   Visa,
@@ -32,6 +39,7 @@ VisaStack.navigationOptions = ({ navigation }) => {
 
 const OrdersStack = createStackNavigator({
   Orders,
+  Detail,
 }, {
   initialRouteName: 'Orders'
 });
@@ -48,7 +56,6 @@ OrdersStack.navigationOptions = ({ navigation }) => {
 
 const MineStack = createStackNavigator({
   Mine,
-  Detail,
 }, {
   initialRouteName: 'Mine'
 });

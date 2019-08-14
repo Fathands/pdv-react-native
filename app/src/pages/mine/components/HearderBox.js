@@ -1,5 +1,12 @@
+/*
+ * @Author: Aiden
+ * @Date: 2019-06-09 20:31:49
+ * @LastEditors: Aiden
+ * @LastEditTime: 2019-08-10 17:50:33
+ * @Description: file content
+ */
 import React, { Component } from 'react';
-import { Text, StyleSheet, View, ImageBackground, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, ImageBackground, TouchableOpacity, Text } from 'react-native';
 import Images from '../../../assets/images';
 
 export default class HearderBox extends Component {
@@ -40,5 +47,5 @@ const styles = StyleSheet.create({
   avatar: {
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
 });

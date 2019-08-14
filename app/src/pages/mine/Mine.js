@@ -1,5 +1,13 @@
+/*
+ * @Author: Aiden
+ * @Date: 2019-05-19 17:26:01
+ * @LastEditors: Aiden
+ * @LastEditTime: 2019-08-10 20:52:10
+ * @Description: file content
+ */
 import React, { Component } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { List, ListItem, Text } from 'native-base';
+import { StyleSheet, View } from 'react-native';
 import HearderBox from './components/HearderBox';
 
 export default class Mine extends Component {
@@ -7,10 +15,27 @@ export default class Mine extends Component {
     header: null,
   };
 
+  goBack() {
+    this.props.navigation.navigate('Detail');
+    console.log(2222);
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <HearderBox navigation={this.props.navigation} />
+
+        <List style={styles.listStyle}>
+          <ListItem onPress={this.goBack.bind(this)}>
+            <Text style={styles.listText}>我的订单</Text>
+          </ListItem>
+          <ListItem>
+            <Text style={styles.listText}>收货地址</Text>
+          </ListItem>
+          <ListItem>
+            <Text style={styles.listText}>设置</Text>
+          </ListItem>
+        </List>
       </View>
     );
   }
@@ -23,4 +48,11 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     flexDirection: 'column',
   },
+  listStyle: {
+    backgroundColor: '#ffffff'
+  },
+  listText: {
+    fontSize: 15,
+    color: '#444444'
+  }
 });

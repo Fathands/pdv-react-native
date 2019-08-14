@@ -1,6 +1,13 @@
+/*
+ * @Author: Aiden
+ * @Date: 2019-05-22 00:35:37
+ * @LastEditors: Aiden
+ * @LastEditTime: 2019-08-15 00:04:30
+ * @Description: file content
+ */
 import React, { Component } from 'react';
 import LottieView from 'lottie-react-native';
-import { getData } from '../../services/async-storage';
+import { getData } from '../../services/async-storage.service';
 
 export default class Startup extends Component {
   static navigationOptions = {
