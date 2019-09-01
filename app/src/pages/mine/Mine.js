@@ -5,6 +5,9 @@ import { StyleSheet, View } from 'react-native';
 import HearderBox from './components/HearderBox';
 
 export default class Mine extends Component {
+  static navigationOptions = {
+    header: null,
+  };
 
   goBack() {
     this.props.navigation.navigate('Detail');

@@ -5,6 +5,9 @@ import { StyleSheet, ImageBackground, TouchableOpacity, View, Image } from 'reac
 import Images from '../../assets/images';
 
 export default class Login extends Component {
+  static navigationOptions = {
+    header: null,
+  };
 
   loginBtnClick() {
     console.log(111);

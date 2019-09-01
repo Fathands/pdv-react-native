@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import { Text, View, Button } from 'react-native';
 
 export default class Orders extends Component {
+  static navigationOptions = {
+    header: null,
+  };
+
   onPressLearnMore() {
     this.props.navigation.goBack();
   }
