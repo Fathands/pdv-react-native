@@ -1,19 +1,10 @@
-/*
- * @Author: Aiden
- * @Date: 2019-05-19 17:26:01
- * @LastEditors: Aiden
- * @LastEditTime: 2019-08-10 20:52:10
- * @Description: file content
- */
+
 import React, { Component } from 'react';
 import { List, ListItem, Text } from 'native-base';
 import { StyleSheet, View } from 'react-native';
 import HearderBox from './components/HearderBox';
 
 export default class Mine extends Component {
-  static navigationOptions = {
-    header: null,
-  };
 
   goBack() {
     this.props.navigation.navigate('Detail');

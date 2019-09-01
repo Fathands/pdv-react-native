@@ -1,11 +1,3 @@
-/*
- * @Author: Aiden
- * @Date: 2019-05-19 15:26:50
- * @LastEditors: Aiden
- * @LastEditTime: 2019-08-15 00:09:40
- * @Description: file content
- */
-
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 

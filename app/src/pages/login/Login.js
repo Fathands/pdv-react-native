@@ -1,10 +1,4 @@
-/*
- * @Author: Aiden
- * @Date: 2019-06-09 21:49:56
- * @LastEditors: Aiden
- * @LastEditTime: 2019-08-10 20:44:19
- * @Description: file content
- */
+
 import React, { Component } from 'react';
 import { Text } from 'native-base';
 import { StyleSheet, ImageBackground, TouchableOpacity, View, Image } from 'react-native';
@@ -17,7 +11,7 @@ export default class Login extends Component {
   }
 
   goBack() {
-    this.props.navigation.navigate('Mine');
+    this.props.navigation.goBack();
   }
 
   render() {

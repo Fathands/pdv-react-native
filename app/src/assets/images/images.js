@@ -1,10 +1,3 @@
-/*
- * @Author: Aiden
- * @Date: 2019-05-25 15:34:05
- * @LastEditors: Aiden
- * @LastEditTime: 2019-08-10 17:21:12
- * @Description: file content
- */
 export const Images =  {
   // tabbar
   tabbar: {

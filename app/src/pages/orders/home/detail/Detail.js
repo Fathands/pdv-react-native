@@ -7,13 +7,14 @@ export default class Detail extends Component {
   }
 
   onPressLearnMore() {
-    this.props.navigation.push('Detail');
+    // this.props.navigation.push('Detail');
+    this.props.navigation.navigate('Login');
   }
 
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Detail</Text>
+        <Text>login</Text>
         <Button
           onPress={this.onPressLearnMore.bind(this)}
           title="go"

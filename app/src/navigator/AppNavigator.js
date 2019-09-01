@@ -1,10 +1,3 @@
-/*
- * @Author: Aiden
- * @Date: 2019-05-19 15:50:44
- * @LastEditors: Aiden
- * @LastEditTime: 2019-08-14 22:20:09
- * @Description: file content
- */
 
 import { createStackNavigator, createAppContainer, createBottomTabNavigator, createSwitchNavigator } from 'react-navigation';
 
@@ -79,21 +72,30 @@ const tabBottomNav = createBottomTabNavigator(
   {
     initialRouteName: 'VISA',
     tabBarComponent: TabBarComponent,
+    navigationOptions: {
+      header: null
+    }
   }
 );
 
-const SwitchNav = createSwitchNavigator({
-  Startup: {
-    screen: Startup,
-  },
-  Welcome: {
-    screen: Welcome,
-  },
+const MainStack = createStackNavigator({
+  tabBottomNav,
   Login: {
     screen: Login,
     mode: 'modal'
   },
-  tabBottomNav,
+}, {
+  initialRouteName: 'tabBottomNav',
+});
+
+const SwitchNav = createSwitchNavigator({
+  Startup,
+  Welcome,
+  MainStack,
+}, {
+  navigationOptions: {
+    header: null
+  }
 });
 
 const AppContainer = createAppContainer(SwitchNav);
